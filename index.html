@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Anna 🌸</title>
+<title>For Priyanka 🌸</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
@@ -35,11 +35,11 @@ body{
 }
 
 /* ── ANNA BG ── */
-#anna-bg{
+#priyanka-bg{
   position:fixed;inset:0;
   pointer-events:none;z-index:0;overflow:hidden;
 }
-#anna-bg span{
+#priyanka-bg span{
   position:absolute;
   font-family:'Great Vibes',cursive;
   color:#d4608c;
@@ -304,17 +304,17 @@ body{
   0%,100%{opacity:.6;transform:translate(-50%,-50%) scale(1);}
   50%    {opacity:1; transform:translate(-50%,-50%) scale(1.1);}
 }
-.reveal-anna-glow{
+.reveal-priyanka-glow{
   position:absolute;top:-30px;left:50%;
   transform:translateX(-50%);
   font-family:'Great Vibes',cursive;
   font-size:4rem;color:var(--rose);
   opacity:0;
-  animation:annaGlow 2.5s ease 1.6s forwards;
+  animation:priyankaGlow 2.5s ease 1.6s forwards;
   text-shadow:0 0 20px rgba(232,160,180,.7),0 0 40px rgba(232,160,180,.4);
   pointer-events:none;white-space:nowrap;
 }
-@keyframes annaGlow{
+@keyframes priyankaGlow{
   0%  {opacity:0;transform:translateX(-50%) scale(.8);}
   50% {opacity:.9;transform:translateX(-50%) scale(1.05);}
   100%{opacity:.6;transform:translateX(-50%) scale(1);}
@@ -430,12 +430,12 @@ body{
 </style>
 </head>
 <body>
-<div id="anna-bg" aria-hidden="true"></div>
+<div id="priyanka-bg" aria-hidden="true"></div>
 <div id="petals" aria-hidden="true"></div>
 
 <div id="app">
   <header class="app-header">
-    <span class="logo-script">For Anna</span>
+    <span class="logo-script">For Priyanka</span>
     <span class="logo-tagline">A bouquet built with love</span>
     <div class="header-rule"></div>
   </header>
@@ -876,7 +876,7 @@ function renderIntro(){
     <div style="animation:introTitle 1.2s ease .3s both;opacity:0;">
       <p style="font-size:.8rem;letter-spacing:.3em;color:var(--text-lt);text-transform:uppercase;margin-bottom:.6rem;font-family:'Cormorant Garamond',serif;">A gift, for her</p>
       <h2 class="intro-tagline">This bouquet was<br>made just for you,</h2>
-      <h2 class="intro-tagline" style="color:var(--rose);margin-top:.15rem;">Anna.</h2>
+      <h2 class="intro-tagline" style="color:var(--rose);margin-top:.15rem;">Priyanka.</h2>
     </div>
     <p class="intro-subtitle" style="animation:fadeIn 1.5s ease 1.2s both;opacity:0;">Every bloom chosen with care. Every petal full of meaning.</p>
     <div class="intro-divider" style="animation:fadeIn 1.5s ease 1.6s both;opacity:0;"></div>
@@ -900,7 +900,7 @@ function renderStep1(){
     </div>
     <p class="step-label">Step 1 of 3</p>
     <h2 class="step-heading">Choose Your Blooms</h2>
-    <p class="step-hint">Pick 6 to 10 flowers for Anna's bouquet</p>
+    <p class="step-hint">Pick 6 to 10 flowers for Priyanka's bouquet</p>
     <div class="flower-grid" id="flowerGrid"></div>
     <div class="tags-area" id="tagsArea"></div>
     <p class="bloom-count ${validClass}" id="bloomCount">${countMsg}</p>
@@ -995,12 +995,12 @@ function renderStep3(){
       <div class="dot done"></div>
       <div class="dot active"></div>
     </div>
-    <h2 class="reveal-headline">This bouquet is yours,<br>Anna.</h2>
+    <h2 class="reveal-headline">This bouquet is yours,<br>Priyanka.</h2>
     <p class="reveal-sub">Every bloom chosen with you in mind</p>
 
     <div class="reveal-bouquet-stage">
       <div class="reveal-glow"></div>
-      <div class="reveal-anna-glow">Anna</div>
+      <div class="reveal-priyanka-glow">Priyanka</div>
       <div class="bouquet-wrap" id="revealBouquet" style="width:min(360px,85vw);height:min(440px,55vh);"></div>
     </div>
 
@@ -1009,7 +1009,7 @@ function renderStep3(){
         <div class="card-tape"></div>
         <div class="card-lines"></div>
         <div class="card-text">
-          <p class="card-salutation">Dear Anna,</p>
+          <p class="card-salutation">Dear Priyanka,</p>
           <p>Every petal in this bouquet was chosen with you in mind. Some things words alone cannot carry — so I let flowers speak instead.</p>
           <br>
           <p>You are someone rare and wonderful, and I wanted you to feel that, even if just for this moment.</p>
@@ -1043,15 +1043,15 @@ function renderStep3(){
 /* ══════════════════════════════════
    ANNA BACKGROUND
 ══════════════════════════════════ */
-function buildAnnaBg(){
-  const bg=document.getElementById('anna-bg');
+function buildPriyankaBg(){
+  const bg=document.getElementById('priyanka-bg');
   let html='';
   for(let i=0;i<80;i++){
     const sz=Math.random()*22+18;
     const rot=Math.random()*360-180;
     const l=Math.random()*110-5;
     const t=Math.random()*110-5;
-    html+=`<span style="font-size:${sz}px;left:${l}%;top:${t}%;transform:rotate(${rot}deg);">Anna</span>`;
+    html+=`<span style="font-size:${sz}px;left:${l}%;top:${t}%;transform:rotate(${rot}deg);">Priyanka</span>`;
   }
   bg.innerHTML=html;
 }
@@ -1089,7 +1089,7 @@ function buildPetals(){
 /* ══════════════════════════════════
    INIT
 ══════════════════════════════════ */
-buildAnnaBg();
+buildPriyankaBg();
 buildPetals();
 renderIntro();
 </script>
